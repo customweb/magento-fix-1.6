@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Customweb_Fix16>
+			<version>1.0.0</version>
+		</Customweb_Fix16>
+	</modules>
+	<global>
+		<models>
+			<customweb_fix16>
+				<class>Customweb_Fix16_Model</class>
+			</customweb_fix16>
+
+			<adminhtml>
+				<rewrite>
+					<config>Customweb_Fix16_Model_Adminhtml_Config</config>
+				</rewrite>
+			</adminhtml>
+		</models>
+	</global>
+	<admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<customweb_fix16 before="Mage_Adminhtml">Customweb_Fix16_Adminhtml</customweb_fix16>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+</config>
